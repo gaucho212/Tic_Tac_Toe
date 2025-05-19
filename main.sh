@@ -79,10 +79,10 @@ while true; do
     fi
 
     # Sprawdzenie remisu
-    if ! echo "${board[@]}" | grep -q " "; then
+    if ! printf "%s" "${board[@]}" | grep -q " "; then
         display_board
         echo "Remis!"
-        break
+    break
     fi
 
     # Zmiana gracza
